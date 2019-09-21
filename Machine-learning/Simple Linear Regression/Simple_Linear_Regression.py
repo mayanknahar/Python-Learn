@@ -23,5 +23,24 @@ x_test=sc_x.transform(x_test)          #so fiting in test case is not necessary"
 #Fitting Simple Linear Regression into the training set
 from sklearn.linear_model import LinearRegression
 #Here machine is the Linear Regresson which is trained on our dataset
-regressor=LinearRegression()      #Object of the linearregression class is generated
+regressor=LinearRegression()      #Object of the linearRegression class is generated
 regressor.fit(x_train,y_train)   #fits the linear regression model with the training set
+
+#Predict the test set result
+y_pred=regressor.predict(x_test)
+
+#Visualizing the training set results
+plt.scatter(x_train, y_train, color='red')
+plt.plot(x_train, regressor.predict(x_train), color='blue')
+plt.title('Salary vs Experience (Training Set)')
+plt.xlabel('Years of Experience')
+plt.ylabel('Salary')
+plt.show()
+
+#Visualizing the test set results
+plt.scatter(x_test, y_test, color='red')
+plt.plot(x_test, y_pred, color='blue')
+plt.title('Salary vs Experience (Training Set)')
+plt.xlabel('Years of Experience')
+plt.ylabel('Salary')
+plt.show()

@@ -1,3 +1,14 @@
 {
-    "python.pythonPath": "C:\\Users\\Marcos\\Anaconda3\\python.exe"
+    "python.pythonPath": "C:\\Users\\Marcos\\Anaconda3\\python.exe",
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./Traveloka",
+        "-p",
+        "*test.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.unittestEnabled": false,
+    "python.testing.promptToConfigure": false
 }

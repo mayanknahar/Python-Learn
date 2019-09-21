@@ -17,11 +17,13 @@ imputer=imputer.fit(x[:,1:3])
 x[:, 1:3]=imputer.transform(x[:, 1:3])
 
 #encoding categorial data
+#encoding of Independent variables
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 labelEncoder_x=LabelEncoder()   #numeric transform of data for analysis purpose
 x[:,0]=labelEncoder_x.fit_transform(x[:,0])
 onehotencoder=OneHotEncoder(categorical_features=[0]) #divides individual columns of each categorial data
 x=onehotencoder.fit_transform(x).toarray()
+#encoding of Dependent variables
 labelEncoder_y=LabelEncoder()
 y=labelEncoder_y.fit_transform(y)
 
